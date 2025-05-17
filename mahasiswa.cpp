@@ -76,7 +76,7 @@ class Admin {
         }
 
         void lihatBuku(const Buku& b) {
-            b.tampilInfo(); // memanggil ke publik, tidak akses langsung ke private
+            b.tampilInfo(); // memanggil method publik, tidak akses langsung ke private
         }
 
         void ubahLevelAkses(Petugas& ptg, const string& newLevel) {

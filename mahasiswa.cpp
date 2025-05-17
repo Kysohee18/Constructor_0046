@@ -84,3 +84,19 @@ class Admin {
             cout << "Level akses petugas diubah menjadi: " << newLevel << endl;
         }
     };
+// program utama 
+int main() {
+    Buku buku1("filosopi kopi", "sule martinez");
+    Peminjam peminjam1("anji", 101);
+    Petugas petugas1("Burhan", 1, "medium");
+    Admin admin1;
+
+    petugas1.prosesPinjam(buku1, peminjam1);
+    admin1.lihatStatistik(peminjam1);
+    admin1.lihatBuku(buku1);
+    admin1.ubahLevelAkses(petugas1, "high");
+    petugas1.prosesKembali(buku1, peminjam1);
+    admin1.lihatStatistik(peminjam1);
+
+    return 0;
+}

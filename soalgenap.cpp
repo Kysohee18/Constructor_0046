@@ -46,7 +46,7 @@ public:
         : nama(n), idPetugas(id), levelAkses(akses) {}
 
     void prosesPinjam(Buku& b, Peminjam& p) {
-        if (!b.dipinjam) {
+        if  (b.dipinjam) {
             b.dipinjam = true;
             p.totalPinjaman++;
             cout << nama << " berhasil meminjam buku.\n";

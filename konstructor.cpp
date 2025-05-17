@@ -28,3 +28,7 @@ mahasiswa ::mahasiswa(int inim, string inama){
     nim=inim;
     nama=inama;
 }
+void mahasiswa ::cetak(){
+    cout<<endl<<"nim = " << nim <<endl;
+    cout<<"nama =" <<nama<<endl;
+}

@@ -34,3 +34,37 @@ public:
     // Memberikan akses hanya untuk membaca data kepada Admin
     friend class Admin;
 };
+//class petugas
+class Petugas {
+private:
+    string nama;
+    int idPetugas;
+    string levelAkses;
+
+public:
+    Petugas(string n, int id, string akses)
+        : nama(n), idPetugas(id), levelAkses(akses) {}
+
+    void prosesPinjam(Buku& b, Peminjam& p) {
+        if (!b.dipinjam) {
+            b.dipinjam = true;
+            p.totalPinjaman++;
+            cout << nama << " berhasil meminjam buku.\n";
+        } else {
+            cout << "Buku sudah dipinjam.\n";
+        }
+    }
+
+    void prosesKembali(Buku& b, Peminjam& p) {
+        if (b.dipinjam) {
+            b.dipinjam = false;
+            p.totalPinjaman--;
+            cout << nama << " berhasil mengembalikan buku.\n";
+        } else {
+            cout << "Buku belum dipinjam.\n";
+        }
+    }
+
+    // Memberikan akses kepada class Admin untuk ubah level akses
+    friend class Admin;
+};

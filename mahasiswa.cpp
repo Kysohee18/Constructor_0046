@@ -68,3 +68,19 @@ public:
     // Memberikan akses kepada class Admin untuk ubah level akses
     friend class Admin;
 };
+// Class Admin
+class Admin {
+    public:
+        void lihatStatistik(const Peminjam& p) {
+            cout << "[Statistik] Total buku dipinjam oleh peminjam: " << p.totalPinjaman << endl;
+        }
+
+        void lihatBuku(const Buku& b) {
+            b.tampilInfo(); // memanggil method publik, tidak akses langsung ke private
+        }
+
+        void ubahLevelAkses(Petugas& ptg, const string& newLevel) {
+            ptg.levelAkses = newLevel;
+            cout << "Level akses petugas diubah menjadi: " << newLevel << endl;
+        }
+    };

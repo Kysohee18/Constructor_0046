@@ -28,3 +28,21 @@ void mahasiswa::printALL(){
     cout <<"Nama = "<<nama<<endl;
     cout <<endl;
 }
+int main(){
+    mahasiswa mhs1("sri dadi");
+    mahasiswa mhs2("budi jatmiko");
+    mahasiswa::setnim(9);//mengakses nim melalui static member fuction setnim
+    mahasiswa mhs3("andi janu");
+    mahasiswa mhs4("joko wahono");
+
+    mhs1.printALL();
+    mhs2.printALL();
+    mhs3.printALL();
+    mhs4.printALL();
+
+    cout<<"akses dari luar object = "<<mahasiswa::getnim()<<endl; //mengakses nim melalui static member fuction 
+    
+    return 0;
+    
+
+}

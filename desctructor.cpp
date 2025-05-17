@@ -29,3 +29,9 @@ void angka::cetakData(){
     }
     cout<<endl;
 }
+int main(){
+    angka belajarcpp(3); // contructor dipanggil
+    angka *ptrbelajarcpp = new angka(5); //contructor dipanggil
+    delete ptrbelajarcpp; // decstructor dipanggil
+    return 0;
+};//desctructor dipanggil

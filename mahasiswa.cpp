@@ -19,3 +19,18 @@ public:
 
     friend class Petugas; // Hanya Petugas boleh ubah status pinjam
 };
+// Class Peminjam
+class Peminjam {
+private:
+    string nama;
+    int id;
+    int totalPinjaman;
+public:
+    Peminjam(string n, int i) : nama(n), id(i), totalPinjaman(0) {}
+
+    // Memberikan akses terbatas ke Petugas
+    friend class Petugas;
+
+    // Memberikan akses hanya untuk membaca data kepada Admin
+    friend class Admin;
+};
